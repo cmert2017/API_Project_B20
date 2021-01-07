@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "title": "POST /api/spartans endpoint success response",
+  "description": "Schema for how successful post body should look like",
+  "default": {},
+  "required": [
+    "success",
+    "data"
+  ],
+  "properties": {
+    "success": {
+      "type": "string",
+      "title": "The success schema",
+      "description": "An explanation about the purpose of this instance.",
+      "pattern": "^A Spartan is Born!$"
+    },
+    "data": {
+      "type": "object",
+      "title": "The data schema",
+      "description": "This is the actual data added to the server",
+      "default": {},
+      "required": [
+        "id",
+        "name",
+        "gender",
+        "phone"
+      ],
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "name": {
+          "title": "Name",
+          "type": "string",
+          "default": "",
+          "minLength": 2,
+          "maxLength": 15
+        },
+        "gender": {
+          "title": "Gender",
+          "type": "string",
+          "default": "Male",
+          "pattern": "^(Male|Female)$"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "integer",
+          "minimum": 1000000000,
+          "maximum": 100000000000
+        }
+      }
+    }
+  }
+}

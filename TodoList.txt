@@ -1,0 +1,4 @@
+1. Add utility package
+2. Add Configuration Reader and DB_Utility from JDBC_Project
+3. Add configuration.properties from JDBC_Project
+4. Add dependency for Oracle driver and MySql Driver from JDBC_Project
